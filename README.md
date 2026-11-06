@@ -2,6 +2,8 @@
 
 One codebase for all three Fiverr packages. Each order is a copy of this repo with `business.config.ts` filled in, plus the client's own accounts for the paid features.
 
+Live demo: https://lws-booking-demo.vercel.app (demo mode, dashboard at /admin, password `demo`).
+
 Stack: Next.js 15, TypeScript, Tailwind 4, Supabase, Vercel. No other SDKs: email (Resend), SMS (Twilio) and deposits (Stripe) go over plain HTTPS.
 
 ## What each package switches on
@@ -27,7 +29,7 @@ With no Supabase keys the app runs on sample bookings in memory. Deploy it as is
 
 ## Per order checklist
 
-1. **Copy the repo.** `gh repo create client-booking --private --template <this repo>` or duplicate the folder.
+1. **Copy the repo.** On GitHub, open this repo and tap **Use this template**, or from the Mac: `gh repo create client-booking --private --template Dandini6713/lws-booking-template --clone`.
 2. **Fill in `business.config.ts`.** Name, contacts, mode, tier, colours, fonts, services with durations and prices, opening hours, closed dates, capacity (chairs or staff), deposit, cancellation wording.
 3. **Deploy a preview to Vercel** with no environment variables. Send the buyer the link. This is your 48 hour preview.
 4. **After approval, connect the client's accounts** (all in their name, so they own everything):
